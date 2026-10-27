@@ -1,0 +1,39 @@
+{
+  "synthetic": true,
+  "seed": 20261027,
+  "primary_metric": "7-day conversion, intention-to-treat",
+  "analysis_cutoff": "2026-09-05",
+  "groups": [
+    {
+      "variant": "A",
+      "users": 12063,
+      "conversions": 1344,
+      "conversion_rate": 0.11141507087789107,
+      "revenue_rub": 8193937.72,
+      "revenue_per_user_rub": 679.2620177401973
+    },
+    {
+      "variant": "B",
+      "users": 11937,
+      "conversions": 1491,
+      "conversion_rate": 0.12490575521487811,
+      "revenue_rub": 8810839.6,
+      "revenue_per_user_rub": 738.1117198626121
+    }
+  ],
+  "delta": 0.013490684336987038,
+  "relative_lift": 0.12108491455139482,
+  "difference_ci95_newcombe": [
+    0.005323759462785094,
+    0.021662766230817698
+  ],
+  "p_value_two_sided": 0.0012052078210610306,
+  "srm_p_value": 0.4160308858559065,
+  "rpu_delta_rub": 58.8497021224149,
+  "rpu_ci95_normal": [
+    -2.299118249808295,
+    119.99852249463808
+  ],
+  "decision": "B improves conversion in this simulation",
+  "limitations": "Synthetic data. Fixed-horizon analysis, no repeated peeking. No company impact or deployment claim. RPU is exploratory."
+}

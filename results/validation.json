@@ -1,0 +1,117 @@
+{
+  "checks": [
+    {
+      "check": "UCI source checksum matches the documented workbook",
+      "passed": true
+    },
+    {
+      "check": "UCI workbook has expected 541909 source rows",
+      "passed": true
+    },
+    {
+      "check": "Accepted sales are positive and cancellations negative",
+      "passed": true
+    },
+    {
+      "check": "Each sales invoice belongs to a single country",
+      "passed": true
+    },
+    {
+      "check": "11 complete reporting months",
+      "passed": true
+    },
+    {
+      "check": "SQL/Pandas monetary reconciliation",
+      "passed": true
+    },
+    {
+      "check": "Gross less cancellations equals net",
+      "passed": true
+    },
+    {
+      "check": "Country aggregation reconciles to total",
+      "passed": true
+    },
+    {
+      "check": "Cohort retention bounded from zero to one",
+      "passed": true
+    },
+    {
+      "check": "Month zero retention equals one",
+      "passed": true
+    },
+    {
+      "check": "November M1 is censored, not zero",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2010-12",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-01",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-02",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-03",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-04",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-05",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-06",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-07",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-08",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-09",
+      "passed": true
+    },
+    {
+      "check": "Independent M1 cohort 2011-10",
+      "passed": true
+    },
+    {
+      "check": "Experiment has unique randomized participants",
+      "passed": true
+    },
+    {
+      "check": "No revenue for non-converters",
+      "passed": true
+    },
+    {
+      "check": "Complete observation window",
+      "passed": true
+    },
+    {
+      "check": "SQL/Pandas experiment counts match",
+      "passed": true
+    },
+    {
+      "check": "Conversion confidence interval contains point estimate",
+      "passed": true
+    },
+    {
+      "check": "Nonnegative p-values bounded by one",
+      "passed": true
+    }
+  ],
+  "total_passed": 28
+}

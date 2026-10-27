@@ -13,6 +13,7 @@ ROOT=Path(__file__).resolve().parent
 DATA=ROOT/'data'; OUT=ROOT/'results'
 DATA.mkdir(exist_ok=True); OUT.mkdir(exist_ok=True)
 SOURCE='https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip'
+SOURCE_SHA256='43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d'
 START='2011-01-01'; END='2011-12-01'
 checks=[]
 
@@ -38,6 +39,8 @@ def main():
         urllib.request.urlretrieve(SOURCE,DATA/'online_retail.zip')
         with zipfile.ZipFile(DATA/'online_retail.zip') as z:
             src.write_bytes(z.read(next(n for n in z.namelist() if n.endswith('.xlsx'))))
+    check('UCI source checksum matches the documented workbook',
+          hashlib.sha256(src.read_bytes()).hexdigest()==SOURCE_SHA256)
     raw=pd.read_excel(src,engine='openpyxl')
     duplicate=raw.duplicated(keep='first')
     df=raw.rename(columns={'InvoiceNo':'invoice_no','StockCode':'stock_code','Description':'description',

@@ -1,0 +1,29 @@
+{
+  "totals": {
+    "period": "January-November 2011",
+    "orders": 17582,
+    "gross_gbp": 9204145.72,
+    "cancellations_gbp": 616898.7,
+    "net_gbp": 8587247.02,
+    "cancellation_value_ratio": 0.06702400404847132,
+    "uk_net_share": 0.831984035554156,
+    "m1_weighted_retention": 0.19941728714794432,
+    "m1_cohorts": "January-October 2011; first observed purchase",
+    "peak_month": "2011-11",
+    "peak_net_gbp": 1461756.25
+  },
+  "quality": {
+    "source_rows": 541909,
+    "accepted_rows_all_dates": 539392,
+    "reporting_rows": 471713,
+    "excluded_rows": 2517,
+    "missing_customer_id_source": 135080,
+    "missing_customer_id_share_source": 0.249266943342886,
+    "exact_duplicate_rows": 5268,
+    "exact_duplicates_policy": "Retained: no reliable source line identifier; equality alone does not prove an error.",
+    "duplicate_sensitivity_net_gbp": 18540.62,
+    "missing_customer_id_sales_share": 0.15032840005927242,
+    "no_positive_price_rows": 2517,
+    "workbook_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d"
+  }
+}

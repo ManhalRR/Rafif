@@ -29,16 +29,29 @@ screenshots/ содержит реальные снимки открытой к�
 node build_workbook.mjs. Готовый XLSX не требует этого пакета для просмотра.
 
 ВОСПРОИЗВЕДЕНИЕ
-Требуется Python 3.10+.
-1. Установить зависимости: python -m pip install -r requirements.txt
+Требуется Python 3.11+ (pandas 3.0.1 не поддерживает Python 3.10).
+1. Установить зависимости расчётов: python -m pip install -r requirements-core.txt
 2. Рассчитать метрики: python analyze.py
-3. Сформировать PDF и HTML: python present.py
+3. Для повторной генерации PDF/HTML установить полный набор:
+   python -m pip install -r requirements.txt
+   python present.py
 4. Сформировать обзор кейсов: python brief.py
 Для генерации PDF present.py использует Arial из C:/Windows/Fonts.
 Для другой ОС замените пути на шрифты с поддержкой кириллицы.
 Если data/Online Retail.xlsx отсутствует, analyze.py загрузит официальный
-архив UCI. Это единственный сетевой шаг. Исходник не изменяется.
+архив UCI. Это единственный сетевой шаг расчётного конвейера. SHA-256 исходника
+проверяется до расчётов; при изменении источника скрипт останавливается.
 SQLite-база пересоздаётся из исходных данных и не включена в ZIP для экономии места.
+
+POWER BI
+Готовый редактируемый проект: powerbi/Retail_Analytics.pbip.
+Пересборка снимков после расчётов: python build_powerbi.py.
+Проверка структуры: python -m pip install -r requirements-powerbi.txt,
+затем python validate_powerbi.py. При первом запуске проверка загружает
+официальные JSON-схемы Microsoft с GitHub; следующие запуски используют кэш.
+44 проверки структуры и данных не заменяют запуск Power BI Desktop:
+отрисовка страниц и выполнение DAX в Desktop пока не проверены, PBIX не включён.
+Подробная инструкция и ограничения: powerbi/README.txt.
 
 ПРОЕКТ 01. ПРОДАЖИ И КОГОРТЫ
 Бизнес-вопросы: как меняется оборот, где сосредоточены продажи, сколько
