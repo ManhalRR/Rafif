@@ -1,0 +1,43 @@
+// Gross less cancellation value. Not profit or net revenue after all operating expenses.
+Оборот после отмен =
+DIVIDE(SUM(Sales[NetPence]), 100)
+
+// Positive-value sales rows.
+Продажи до отмен =
+DIVIDE(SUM(Sales[GrossPence]), 100)
+
+// Absolute value of cancellation rows.
+Сумма отмен =
+DIVIDE(SUM(Sales[CancelledPence]), 100)
+
+// Sum of positive-sale invoice counts at country × month grain. Cross-grain invoice uniqueness is validated by build checks.
+Заказы =
+SUM(Sales[Orders])
+
+// Cancellation amount / gross sales, not an order cancellation rate.
+Доля суммы отмен =
+DIVIDE([Сумма отмен], [Продажи до отмен])
+
+// Prior calendar month, retaining the country filter. Blank if absent or multiple months selected.
+Предыдущий месяц =
+VAR CurrentMonth = SELECTEDVALUE('Calendar'[MonthIndex]) RETURN IF(NOT ISBLANK(CurrentMonth), CALCULATE([Оборот после отмен], FILTER(ALL('Calendar'), 'Calendar'[MonthIndex] = CurrentMonth - 1)))
+
+// Month-over-month change. Blank for January, missing prior month, or totals.
+Изменение м/м =
+IF(HASONEVALUE('Calendar'[MonthIndex]), DIVIDE([Оборот после отмен] - [Предыдущий месяц], [Предыдущий месяц]))
+
+// Share of all-country net sales for the selected month range; numerator retains country context.
+Доля страны =
+DIVIDE([Оборот после отмен], CALCULATE([Оборот после отмен], ALL(Countries)))
+
+// Weighted retention for observable windows; blanks excluded from denominator. Totals across ages are blank.
+Удержание =
+VAR ObservedRows = FILTER(Cohorts, NOT ISBLANK(Cohorts[ActiveCustomers])) RETURN IF(HASONEVALUE(Cohorts[Age]), DIVIDE(SUMX(ObservedRows, Cohorts[ActiveCustomers]), SUMX(ObservedRows, Cohorts[CohortSize])))
+
+// Fixed weighted M1 across January–October 2011 cohorts; all countries.
+Удержание M1 =
+CALCULATE([Удержание], FILTER(ALL(Cohorts), Cohorts[AgeIndex] = 1 && Cohorts[Cohort] >= "2011-01" && Cohorts[Cohort] <= "2011-10"))
+
+// Known CustomerID, first observed positive purchase.
+Размер когорты =
+IF(HASONEVALUE(Cohorts[Cohort]), MAX(Cohorts[CohortSize]))

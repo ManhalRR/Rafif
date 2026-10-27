@@ -1,0 +1,42 @@
+{
+  "Analytics_Report.pdf": {
+    "bytes": 100261,
+    "sha256": "8ac95f24c2c62fa43de56767f513da93e6a382330bdb525abcbe1002340d36f8"
+  },
+  "analyze.py": {
+    "bytes": 10687,
+    "sha256": "49242c9cc24700021b72f237cf763170e1a17d44fa2054b4f82401cc888ac9e3"
+  },
+  "measures.dax": {
+    "bytes": 2307,
+    "sha256": "12c22ac0921c085a2059d2baf3d6abfd919041ec00413f78da8d0294dae508a6"
+  },
+  "PowerBI_README.txt": {
+    "bytes": 3624,
+    "sha256": "d7dfe0fda60b955e740c3caea72b2d121054420c1946c1e4a30049a00287b07c"
+  },
+  "PowerBI_Retail_Analytics.zip": {
+    "bytes": 43965,
+    "sha256": "ac1070f1a196d6947f51e416953f4491c14a3aa375eb5eb682b8aad6f9d0c4a9"
+  },
+  "PowerBI_validation.json": {
+    "bytes": 6025,
+    "sha256": "32919f1dfaf896c312fe6daec91c3c7934179142396705cb51cb6e2a33769c2b"
+  },
+  "Project_Overview.pdf": {
+    "bytes": 89657,
+    "sha256": "ebc5ffa9b5ddbcd504bcc7815276a3f6e028e59f7b077672bc8909969da4fbeb"
+  },
+  "Rafif_Analytics_Source.zip": {
+    "bytes": 1601169,
+    "sha256": "bdddd412832a8b9d4ef8f36000878c8eadcd1ef508ec8b215811701d5c3631fb"
+  },
+  "Retail_Analytics.xlsx": {
+    "bytes": 47435,
+    "sha256": "981d308c2cc4c6583e3b2edbc1a075991f24efcac78f305dcadfa56efcde8389"
+  },
+  "SQL_queries.zip": {
+    "bytes": 1980,
+    "sha256": "05ae30922890c36d1f063367f2171bbad5dcc97a67adaf060e286e608e75ebff"
+  }
+}

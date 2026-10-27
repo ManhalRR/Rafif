@@ -1,0 +1,184 @@
+{
+  "checks": [
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\report.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\version.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\pages.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\page.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\page.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\page.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_cancel\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_countries\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_country\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_country_table\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_footnote\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_method\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_month\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_net\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_share\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\geography\\visuals\\geography_title\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_footnote\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_limits\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_m1\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_matrix\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_scope\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\retention\\visuals\\retention_title\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_cancel\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_country\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_footnote\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_method\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_month\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_month_table\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_net\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_orders\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_title\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Microsoft schema: Retail.Report\\definition\\pages\\sales\\visuals\\sales_trend\\visual.json",
+      "passed": true
+    },
+    {
+      "check": "Report points to included semantic model",
+      "passed": true
+    },
+    {
+      "check": "Relationship Sales.MonthIndex",
+      "passed": true
+    },
+    {
+      "check": "Relationship Calendar.MonthIndex",
+      "passed": true
+    },
+    {
+      "check": "Relationship Sales.Country",
+      "passed": true
+    },
+    {
+      "check": "Relationship Countries.Country",
+      "passed": true
+    },
+    {
+      "check": "Net sales integer pence",
+      "passed": true
+    },
+    {
+      "check": "Order total",
+      "passed": true
+    },
+    {
+      "check": "Invoices do not cross country-month grains",
+      "passed": true
+    },
+    {
+      "check": "Germany filter",
+      "passed": true
+    },
+    {
+      "check": "Country and month filters",
+      "passed": true
+    },
+    {
+      "check": "Weighted M1",
+      "passed": true
+    },
+    {
+      "check": "Unobserved window remains empty",
+      "passed": true
+    }
+  ],
+  "checks_passed": 44,
+  "power_bi_desktop_tested": false,
+  "dax_engine_tested": false,
+  "scope": "Microsoft JSON schemas, references and independent source-data controls. Visual rendering and DAX evaluation require Power BI Desktop."
+}
