@@ -3,9 +3,9 @@
     "bytes": 100261,
     "sha256": "8ac95f24c2c62fa43de56767f513da93e6a382330bdb525abcbe1002340d36f8"
   },
-  "analyze.py": {
-    "bytes": 10904,
-    "sha256": "9603e9f37800c99f0108b3a8aae3f8007b16cd71c60ace99d98518e07c3f7325"
+  "Commerce_Analytics_Platform.zip": {
+    "bytes": 484359,
+    "sha256": "f58cda82b0e42ee60f7ef1d771914c62eacc8d126d3971d64019a0ff24825732"
   },
   "Customer_Analytics_Source.zip": {
     "bytes": 31310,
@@ -14,10 +14,6 @@
   "Excel_Openpyxl_validation.json": {
     "bytes": 650,
     "sha256": "77eba1009353c63ed13f310f79781d0b32ca7cad01d2e4a47604048817c10038"
-  },
-  "measures.dax": {
-    "bytes": 2307,
-    "sha256": "12c22ac0921c085a2059d2baf3d6abfd919041ec00413f78da8d0294dae508a6"
   },
   "PowerBI_README.txt": {
     "bytes": 3624,
@@ -50,5 +46,13 @@
   "SQL_queries.zip": {
     "bytes": 1980,
     "sha256": "05ae30922890c36d1f063367f2171bbad5dcc97a67adaf060e286e608e75ebff"
+  },
+  "analyze.py": {
+    "bytes": 10904,
+    "sha256": "9603e9f37800c99f0108b3a8aae3f8007b16cd71c60ace99d98518e07c3f7325"
+  },
+  "measures.dax": {
+    "bytes": 2307,
+    "sha256": "12c22ac0921c085a2059d2baf3d6abfd919041ec00413f78da8d0294dae508a6"
   }
 }

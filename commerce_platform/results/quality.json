@@ -1,0 +1,181 @@
+{
+  "rules": [
+    {
+      "rule": "overlap_superseded_by_second_sheet",
+      "rows": 22523
+    },
+    {
+      "rule": "accepted",
+      "rows": 1038818
+    },
+    {
+      "rule": "nonpositive_or_invalid_price",
+      "rows": 6029
+    },
+    {
+      "rule": "sign_prefix_mismatch",
+      "rows": 1
+    }
+  ],
+  "missing_customer_rows": 243007,
+  "missing_customer_share": 0.22766872999172733,
+  "exact_duplicate_rows": 11812,
+  "duplicate_net_sensitivity_pence": 5326147,
+  "monthly": [
+    {
+      "month": "2009-12",
+      "rows": 44972,
+      "missing_customer_rows": 13219
+    },
+    {
+      "month": "2010-01",
+      "rows": 31324,
+      "missing_customer_rows": 8888
+    },
+    {
+      "month": "2010-02",
+      "rows": 28856,
+      "missing_customer_rows": 4952
+    },
+    {
+      "month": "2010-03",
+      "rows": 41208,
+      "missing_customer_rows": 8095
+    },
+    {
+      "month": "2010-04",
+      "rows": 33894,
+      "missing_customer_rows": 6064
+    },
+    {
+      "month": "2010-05",
+      "rows": 34778,
+      "missing_customer_rows": 5174
+    },
+    {
+      "month": "2010-06",
+      "rows": 39693,
+      "missing_customer_rows": 7746
+    },
+    {
+      "month": "2010-07",
+      "rows": 33237,
+      "missing_customer_rows": 5492
+    },
+    {
+      "month": "2010-08",
+      "rows": 33046,
+      "missing_customer_rows": 6105
+    },
+    {
+      "month": "2010-09",
+      "rows": 41921,
+      "missing_customer_rows": 6538
+    },
+    {
+      "month": "2010-10",
+      "rows": 58838,
+      "missing_customer_rows": 8279
+    },
+    {
+      "month": "2010-11",
+      "rows": 77658,
+      "missing_customer_rows": 16172
+    },
+    {
+      "month": "2010-12",
+      "rows": 42208,
+      "missing_customer_rows": 15361
+    },
+    {
+      "month": "2011-01",
+      "rows": 35007,
+      "missing_customer_rows": 13098
+    },
+    {
+      "month": "2011-02",
+      "rows": 27580,
+      "missing_customer_rows": 7218
+    },
+    {
+      "month": "2011-03",
+      "rows": 36502,
+      "missing_customer_rows": 8682
+    },
+    {
+      "month": "2011-04",
+      "rows": 29655,
+      "missing_customer_rows": 6459
+    },
+    {
+      "month": "2011-05",
+      "rows": 36785,
+      "missing_customer_rows": 7879
+    },
+    {
+      "month": "2011-06",
+      "rows": 36688,
+      "missing_customer_rows": 8852
+    },
+    {
+      "month": "2011-07",
+      "rows": 39330,
+      "missing_customer_rows": 11830
+    },
+    {
+      "month": "2011-08",
+      "rows": 35151,
+      "missing_customer_rows": 7495
+    },
+    {
+      "month": "2011-09",
+      "rows": 50066,
+      "missing_customer_rows": 9246
+    },
+    {
+      "month": "2011-10",
+      "rows": 60504,
+      "missing_customer_rows": 9812
+    },
+    {
+      "month": "2011-11",
+      "rows": 84445,
+      "missing_customer_rows": 18861
+    }
+  ],
+  "ownership_audit": {
+    "sheets": [
+      {
+        "sheet": "Year 2009-2010",
+        "rows": 525461,
+        "first_date": "2009-12-01 07:45:00",
+        "last_date": "2010-12-09 20:01:00",
+        "exact_duplicates": 6865
+      },
+      {
+        "sheet": "Year 2010-2011",
+        "rows": 541910,
+        "first_date": "2010-12-01 08:26:00",
+        "last_date": "2011-12-09 12:50:00",
+        "exact_duplicates": 5268
+      }
+    ],
+    "first_overlap_rows": 22523,
+    "second_overlap_rows": 22523,
+    "overlap_invoice_count": 1088,
+    "overlap_multisets_equal": true,
+    "overlap_rows_excluded": 22523,
+    "combined_exact_duplicates": 34335,
+    "selected_exact_duplicates": 11812,
+    "selected_rows": 1044848
+  },
+  "order_key_audit": {
+    "invoices_spanning_countries": 0,
+    "invoices_spanning_months": 0,
+    "plain_invoice_orders": 39258,
+    "composite_orders": 39258
+  },
+  "reporting_missing_customer_rows": 221517,
+  "excluded_row_policy": "rules are mutually exclusive; accepted rule is retained source rows",
+  "duplicate_scope": "date-ownership-selected source before quality filtering; raw combined duplicates also reported in ownership audit"
+}

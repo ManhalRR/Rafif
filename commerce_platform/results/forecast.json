@@ -1,0 +1,295 @@
+{
+  "meta": {
+    "currency": "GBP",
+    "source": "UCI Online Retail II",
+    "source_url": "https://doi.org/10.24432/C5CG6D",
+    "training_start": "2009-12",
+    "training_end": "2011-11",
+    "history_months": 24,
+    "backtest_folds": 6,
+    "horizon_months": 1,
+    "target": "monthly net sales after cancellation lines, not profit",
+    "built_at_utc": "2026-10-30T08:36:58.895276+00:00",
+    "monthly_csv_sha256": "08cdaffcee0315de8f11b7b3aec2b5aaafee64e1ac09cb3a79a7c41de0f5f6d9"
+  },
+  "forecast_month": "2011-12",
+  "models": [
+    {
+      "id": "last_month",
+      "label": "Последний месяц",
+      "mae_gbp": 137081.59,
+      "wape": 0.1461066877674053,
+      "absolute_error_pence": 82248954,
+      "wape_denominator_pence": 562937640,
+      "forecast_gbp": 1461756.25
+    },
+    {
+      "id": "mean_3",
+      "label": "Среднее трёх последних месяцев",
+      "mae_gbp": 205926.88,
+      "wape": 0.2194845720389207,
+      "absolute_error_pence": 123556127,
+      "wape_denominator_pence": 562937640,
+      "forecast_gbp": 1184049.51
+    },
+    {
+      "id": "seasonal_12",
+      "label": "Тот же месяц предыдущего года",
+      "mae_gbp": 56654.18,
+      "wape": 0.06038415018757673,
+      "absolute_error_pence": 33992511,
+      "wape_denominator_pence": 562937640,
+      "forecast_gbp": 748957.02
+    }
+  ],
+  "backtest": [
+    {
+      "month": "2011-06",
+      "train_through": "2011-05",
+      "train_months": 18,
+      "actual_gbp": 691123.12,
+      "predictions": {
+        "last_month": 723333.51,
+        "mean_3": 633269.24,
+        "seasonal_12": 679786.61
+      },
+      "errors_gbp": {
+        "last_month": -32210.39,
+        "mean_3": 57853.88,
+        "seasonal_12": 11336.51
+      },
+      "absolute_errors_gbp": {
+        "last_month": 32210.39,
+        "mean_3": 57853.88,
+        "seasonal_12": 11336.51
+      }
+    },
+    {
+      "month": "2011-07",
+      "train_through": "2011-06",
+      "train_months": 19,
+      "actual_gbp": 681300.11,
+      "predictions": {
+        "last_month": 691123.12,
+        "mean_3": 635887.92,
+        "seasonal_12": 619268.15
+      },
+      "errors_gbp": {
+        "last_month": -9823.01,
+        "mean_3": 45412.19,
+        "seasonal_12": 62031.96
+      },
+      "absolute_errors_gbp": {
+        "last_month": 9823.01,
+        "mean_3": 45412.19,
+        "seasonal_12": 62031.96
+      }
+    },
+    {
+      "month": "2011-08",
+      "train_through": "2011-07",
+      "train_months": 20,
+      "actual_gbp": 704804.63,
+      "predictions": {
+        "last_month": 681300.11,
+        "mean_3": 698585.58,
+        "seasonal_12": 656776.34
+      },
+      "errors_gbp": {
+        "last_month": 23504.52,
+        "mean_3": 6219.05,
+        "seasonal_12": 48028.29
+      },
+      "absolute_errors_gbp": {
+        "last_month": 23504.52,
+        "mean_3": 6219.05,
+        "seasonal_12": 48028.29
+      }
+    },
+    {
+      "month": "2011-09",
+      "train_through": "2011-08",
+      "train_months": 21,
+      "actual_gbp": 1019687.62,
+      "predictions": {
+        "last_month": 704804.63,
+        "mean_3": 692409.29,
+        "seasonal_12": 853650.43
+      },
+      "errors_gbp": {
+        "last_month": 314882.99,
+        "mean_3": 327278.33,
+        "seasonal_12": 166037.19
+      },
+      "absolute_errors_gbp": {
+        "last_month": 314882.99,
+        "mean_3": 327278.33,
+        "seasonal_12": 166037.19
+      }
+    },
+    {
+      "month": "2011-10",
+      "train_through": "2011-09",
+      "train_months": 22,
+      "actual_gbp": 1070704.67,
+      "predictions": {
+        "last_month": 1019687.62,
+        "mean_3": 801930.79,
+        "seasonal_12": 1084094.22
+      },
+      "errors_gbp": {
+        "last_month": 51017.05,
+        "mean_3": 268773.88,
+        "seasonal_12": -13389.55
+      },
+      "absolute_errors_gbp": {
+        "last_month": 51017.05,
+        "mean_3": 268773.88,
+        "seasonal_12": 13389.55
+      }
+    },
+    {
+      "month": "2011-11",
+      "train_through": "2011-10",
+      "train_months": 23,
+      "actual_gbp": 1461756.25,
+      "predictions": {
+        "last_month": 1070704.67,
+        "mean_3": 931732.31,
+        "seasonal_12": 1422654.64
+      },
+      "errors_gbp": {
+        "last_month": 391051.58,
+        "mean_3": 530023.94,
+        "seasonal_12": 39101.61
+      },
+      "absolute_errors_gbp": {
+        "last_month": 391051.58,
+        "mean_3": 530023.94,
+        "seasonal_12": 39101.61
+      }
+    }
+  ],
+  "history": [
+    {
+      "month": "2009-12",
+      "net_gbp": 799847.11
+    },
+    {
+      "month": "2010-01",
+      "net_gbp": 624032.89
+    },
+    {
+      "month": "2010-02",
+      "net_gbp": 532717.85
+    },
+    {
+      "month": "2010-03",
+      "net_gbp": 765848.76
+    },
+    {
+      "month": "2010-04",
+      "net_gbp": 644174.79
+    },
+    {
+      "month": "2010-05",
+      "net_gbp": 615322.83
+    },
+    {
+      "month": "2010-06",
+      "net_gbp": 679786.61
+    },
+    {
+      "month": "2010-07",
+      "net_gbp": 619268.15
+    },
+    {
+      "month": "2010-08",
+      "net_gbp": 656776.34
+    },
+    {
+      "month": "2010-09",
+      "net_gbp": 853650.43
+    },
+    {
+      "month": "2010-10",
+      "net_gbp": 1084094.22
+    },
+    {
+      "month": "2010-11",
+      "net_gbp": 1422654.64
+    },
+    {
+      "month": "2010-12",
+      "net_gbp": 748957.02
+    },
+    {
+      "month": "2011-01",
+      "net_gbp": 560000.26
+    },
+    {
+      "month": "2011-02",
+      "net_gbp": 498062.65
+    },
+    {
+      "month": "2011-03",
+      "net_gbp": 683267.08
+    },
+    {
+      "month": "2011-04",
+      "net_gbp": 493207.12
+    },
+    {
+      "month": "2011-05",
+      "net_gbp": 723333.51
+    },
+    {
+      "month": "2011-06",
+      "net_gbp": 691123.12
+    },
+    {
+      "month": "2011-07",
+      "net_gbp": 681300.11
+    },
+    {
+      "month": "2011-08",
+      "net_gbp": 704804.63
+    },
+    {
+      "month": "2011-09",
+      "net_gbp": 1019687.62
+    },
+    {
+      "month": "2011-10",
+      "net_gbp": 1070704.67
+    },
+    {
+      "month": "2011-11",
+      "net_gbp": 1461756.25
+    }
+  ],
+  "recommended_id": "seasonal_12",
+  "recommendation_label": "Минимальная MAE на шести месяцах подбора",
+  "selection": {
+    "metric": "MAE",
+    "period_start": "2011-06",
+    "period_end": "2011-11",
+    "same_folds_used_for_selection": true,
+    "independent_selected_model_evaluation": false,
+    "tie_break_order": [
+      "last_month",
+      "mean_3",
+      "seasonal_12"
+    ],
+    "explanation": "Стратегия выбрана по тем же шести фолдам, на которых приведены ошибки. Отдельная независимая оценка выбранной стратегии отсутствует."
+  },
+  "limitations": [
+    "Backtest: июнь–ноябрь 2011, один месяц вперёд. В каждом фолде доступны только предыдущие полные месяцы.",
+    "Шесть ошибок дают ограниченную оценку устойчивости; сравнение и выбор выполнены на одних данных.",
+    "Прогноз декабря 2011 построен только по данным до ноября. Неполный декабрь не используется ни для обучения, ни как фактическое значение.",
+    "Калиброванный прогнозный интервал не рассчитывается; результат является точечным прогнозом.",
+    "Не учтены цены, рекламные кампании, ассортимент, запасы и изменения бизнеса. Это простые базовые стратегии.",
+    "WAPE = сумма абсолютных ошибок / сумма абсолютных фактических значений; при нулевом знаменателе WAPE отсутствует.",
+    "Оборот после отмен не равен прибыли; прогноз не доказывает будущий результат бизнеса."
+  ]
+}

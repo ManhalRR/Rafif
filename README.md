@@ -1,8 +1,24 @@
 # Рафиф Алшауи · Data Analytics
 
-**[Открыть портфолио](https://manhalrr.github.io/Rafif/)** · [Интерактивный анализ](https://manhalrr.github.io/Rafif/analytics.html) · [CRM-кейс](customer_analytics/index.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Полный комплект](downloads/Rafif_Analytics_Source.zip)
+**[Открыть портфолио](https://manhalrr.github.io/Rafif/)** · [Интерактивный анализ](https://manhalrr.github.io/Rafif/analytics.html) · [CRM-кейс](customer_analytics/index.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Продажи / CRM / A/B](downloads/Rafif_Analytics_Source.zip)
 
-Три аналитических кейса: продажи и когорты UCI Online Retail, A/B-анализ на синтетических данных и Customer Analytics — RFM-сегментация с проверкой на будущем периоде. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP.
+Ранее опубликованные три аналитических кейса: продажи и когорты UCI Online Retail, A/B-анализ на синтетических данных и Customer Analytics — RFM-сегментация с проверкой на будущем периоде. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP.
+
+<!-- commerce-integration:readme:start -->
+## Главный проект — Commerce Analytics Platform
+
+**[Открыть 6 разделов](commerce_platform/)** · [Код, агрегаты и локальный просмотр ZIP](downloads/Commerce_Analytics_Platform.zip) · [Методика и запуск](commerce_platform/README.md).
+
+**1 067 371 исходная строка, 24 полных месяца, Python и SQLite.** Сквозной проект включает продажи и отмены, ABC-анализ ассортимента, когорты M0–M11, walk-forward сравнение трёх прогнозных стратегий, качество данных и архитектуру SQL-хранилища. Внутри есть фильтры, поиск, сортировка и выгрузки CSV.
+
+Доказанное перекрытие 22 523 строк между исходными листами исключается по правилу владения периодом. Денежные суммы хранятся в целых пенсах, SQL независимо сверяется с Python. Прогноз не использует будущие данные; выбор стратегии и оценка на тех же шести месяцах явно разграничены с независимой оценкой.
+
+Источник: [UCI Online Retail II, Chen (2012), DOI 10.24432/C5CG6D](https://doi.org/10.24432/C5CG6D), CC BY 4.0. В веб-копии только агрегаты; сырые клиентские строки и локальная база не публикуются. Эффект внедрения, прибыль и производственное использование не заявляются.
+
+Commerce Analytics поставляется отдельным архивом. Ранее опубликованный комплект **[«Продажи / CRM / A/B»](downloads/Rafif_Analytics_Source.zip)** сохранён отдельно.
+
+Проверки конвейера: **<!-- commerce-core-checks -->42<!-- /commerce-core-checks --> проверки**. [Протокол](commerce_platform/results/validation.json) · [Повторный полный прогон: пять CSV побайтно совпали](commerce_platform/results/reexecution_validation.json).
+<!-- commerce-integration:readme:end -->
 
 ## Быстрая проверка
 
@@ -37,7 +53,7 @@ python analyze.py
 
 Конвейер: **XLSX → нормализация → SQLite / SQL → независимая сверка pandas → CSV / JSON → отчётность**.
 
-В полном архиве дополнительно находятся генераторы PDF/HTML, Excel и PBIP, исходники модели, CRM-кейс и готовые отчёты. Минимальные зависимости — `requirements-core.txt`; полный набор — `requirements.txt`. Excel пересобирается общедоступным `openpyxl`: `python build_workbook.py`. Node.js и закрытые пакеты для этого не нужны. Генератор PDF автоматически ищет Arial/DejaVu Sans или принимает `RAFIF_FONT_REGULAR` и `RAFIF_FONT_BOLD`.
+В архиве «Продажи / CRM / A/B» дополнительно находятся генераторы PDF/HTML, Excel и PBIP, исходники модели, CRM-кейс и готовые отчёты. Минимальные зависимости — `requirements-core.txt`; полный набор — `requirements.txt`. Excel пересобирается общедоступным `openpyxl`: `python build_workbook.py`. Node.js и закрытые пакеты для этого не нужны. Генератор PDF автоматически ищет Arial/DejaVu Sans или принимает `RAFIF_FONT_REGULAR` и `RAFIF_FONT_BOLD`.
 
 [Новая Excel-книга](downloads/Retail_Analytics_Openpyxl.xlsx) собрана через openpyxl, затем пересчитана и проверена в Microsoft Excel: итог £8 587 247,02, 17 582 заказа, Германия £199 330,67 / 410 заказов, M1 19,94%, пустые будущие окна. [Протокол](downloads/Excel_Openpyxl_validation.json). Исходная [опубликованная книга](downloads/Retail_Analytics.xlsx) сохранена отдельно. При локальной пересборке openpyxl записывает формулы, но не вычисляет их: откройте результат в Excel/LibreOffice, пересчитайте и сохраните.
 

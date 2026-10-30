@@ -1,0 +1,142 @@
+{
+  "performed_at_utc": "2026-10-30T08:40:29.160357+00:00",
+  "source_sha256": "bcbe73b35f5b7babf197fb0cb983a11f5d9ff929078d4aa53d171b1f2df2e980",
+  "source_zip_sha256": "572e36277c2390fbfde10664750731e0a86f55e33470d91919085f0408e67bfb",
+  "warehouse_sha256": "598317e8962b72fc27a3ca651c795a2a693330fa3852baf1ad9628c8d8d10443",
+  "passed": 42,
+  "failed": 0,
+  "reconciliation_checks": [
+    {
+      "check": "Source workbook row count",
+      "passed": true
+    },
+    {
+      "check": "Overlap row multisets identical",
+      "passed": true
+    },
+    {
+      "check": "Source ownership is complete after explicit overlap exclusion",
+      "passed": true
+    },
+    {
+      "check": "Source row provenance unique",
+      "passed": true
+    },
+    {
+      "check": "SQLite foreign key validation",
+      "passed": true
+    },
+    {
+      "check": "SQLite integrity check",
+      "passed": true
+    },
+    {
+      "check": "Exactly 24 complete reporting months",
+      "passed": true
+    },
+    {
+      "check": "Gross less cancellations equals net",
+      "passed": true
+    },
+    {
+      "check": "Monthly gross_pence reconciles to independent transaction aggregation",
+      "passed": true
+    },
+    {
+      "check": "Monthly cancel_pence reconciles to independent transaction aggregation",
+      "passed": true
+    },
+    {
+      "check": "Monthly net_pence reconciles to independent transaction aggregation",
+      "passed": true
+    },
+    {
+      "check": "Monthly orders reconciles to independent transaction aggregation",
+      "passed": true
+    },
+    {
+      "check": "Independent pandas vs SQL monthly gross_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent pandas vs SQL monthly cancel_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent pandas vs SQL monthly net_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent pandas vs SQL monthly orders",
+      "passed": true
+    },
+    {
+      "check": "Country-month monetary aggregates match pandas",
+      "passed": true
+    },
+    {
+      "check": "Composite order belongs to exactly one country and month",
+      "passed": true
+    },
+    {
+      "check": "Country-month orders add to total",
+      "passed": true
+    },
+    {
+      "check": "Product gross_pence reconciles",
+      "passed": true
+    },
+    {
+      "check": "Product cancel_pence reconciles",
+      "passed": true
+    },
+    {
+      "check": "Product net_pence reconciles",
+      "passed": true
+    },
+    {
+      "check": "Product net matches independent pandas aggregation",
+      "passed": true
+    },
+    {
+      "check": "ABC shares sum to 1",
+      "passed": true
+    },
+    {
+      "check": "ABC deterministic gross/code sorting",
+      "passed": true
+    },
+    {
+      "check": "Cohort sizes reconcile to unique known buyers",
+      "passed": true
+    },
+    {
+      "check": "All M0 cells equal cohort size",
+      "passed": true
+    },
+    {
+      "check": "All cohort cells reconcile independently including future NULL",
+      "passed": true
+    },
+    {
+      "check": "Observed cohort rates within unit interval",
+      "passed": true
+    },
+    {
+      "check": "Quality monthly counts reconcile",
+      "passed": true
+    },
+    {
+      "check": "Quality missing customer counts reconcile",
+      "passed": true
+    }
+  ],
+  "fixture_tests_passed": 11,
+  "fixture_file": "tests/test_engine.py",
+  "runtime": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "sqlite": "3.53.1"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "checked_at_utc": "2026-10-30T08:42:12.792726+00:00",
+  "comparison": "Two complete executions of the verified XLSX produced byte-identical five aggregate CSVs. The second execution added a cancellation-only fixture and defined zero-total gross shares as NULL; that edge case is absent in the observed source. Validation check count increased from 41 to 42.",
+  "all_compared_csv_identical": true,
+  "files": {
+    "monthly.csv": "08cdaffcee0315de8f11b7b3aec2b5aaafee64e1ac09cb3a79a7c41de0f5f6d9",
+    "country_month.csv": "f60d84beb1fa9abfb0753f7b5bc4c8612d2d55da3a56e2542e11bce81aa7f182",
+    "products.csv": "8c1514d2fbf6b8cd2ac6676267069107df51782be132c8d0a138b288ced16440",
+    "cohorts.csv": "8879e3e008ce9b1a32dbb6d7f35b580167cdbdc8bf5a1dc5348d6f04c9ea9150",
+    "quality_monthly.csv": "96d425450a90cc1340113e365342b779719f83b019d4d5c74e01691847a74984"
+  }
+}
