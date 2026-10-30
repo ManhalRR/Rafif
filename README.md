@@ -1,13 +1,23 @@
-# Рафиф Алшауи · Data Analytics
+# Рафиф Алшауи — аналитик данных
 
-**[Открыть портфолио](https://manhalrr.github.io/Rafif/)** · [Интерактивный анализ](https://manhalrr.github.io/Rafif/analytics.html) · [CRM-кейс](customer_analytics/index.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Продажи / CRM / A/B](downloads/Rafif_Analytics_Source.zip)
+**Москва · Полный день · Удалённо и гибрид.**
 
-Ранее опубликованные три аналитических кейса: продажи и когорты UCI Online Retail, A/B-анализ на синтетических данных и Customer Analytics — RFM-сегментация с проверкой на будущем периоде. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP.
+**[Открыть Commerce Analytics](https://manhalrr.github.io/Rafif/commerce_platform/)** · **[Резюме и связь на hh.ru](https://hh.ru/resume/2a6c4483ff1150b8ce0039ed1f717246704a79)**
+
+Продажи, клиентская база и управленческая отчётность. SQL, Python, Excel и Power Query — от подготовки данных до дашборда и рекомендаций.
+
+[Все проекты](https://manhalrr.github.io/Rafif/) · [Код на GitHub](https://github.com/ManhalRR/Rafif)
+
+## Посмотреть за 2 минуты
+
+1. **[Проверить отчёт и CSV](https://manhalrr.github.io/Rafif/commerce_platform/#overview).** Выберите Germany, январь–март 2011: **82 заказа**, оборот после отмен **£39 590,69**. Фильтры меняют показатели и графики; выборку можно экспортировать.
+2. **[Увидеть бизнес-решение](https://manhalrr.github.io/Rafif/commerce_platform/#products).** ABC-анализ показывает концентрацию продаж. Рекомендации указывают, какие дополнительные данные нужны перед решением об ассортименте.
+3. **[Проверить расчёты](https://manhalrr.github.io/Rafif/commerce_platform/#quality).** 42 проверки конвейера, доказанное перекрытие выгрузок, независимая сверка SQL/Python. [Архитектура и код](https://manhalrr.github.io/Rafif/commerce_platform/#architecture) доступны рядом.
 
 <!-- commerce-integration:readme:start -->
 ## Главный проект — Commerce Analytics Platform
 
-**[Открыть 6 разделов](commerce_platform/)** · [Код, агрегаты и локальный просмотр ZIP](downloads/Commerce_Analytics_Platform.zip) · [Методика и запуск](commerce_platform/README.md).
+**[Открыть 6 разделов](https://manhalrr.github.io/Rafif/commerce_platform/)** · [Код, агрегаты и локальный просмотр ZIP](downloads/Commerce_Analytics_Platform.zip) · [Методика и запуск](commerce_platform/README.md).
 
 **1 067 371 исходная строка, 24 полных месяца, Python и SQLite.** Сквозной проект включает продажи и отмены, ABC-анализ ассортимента, когорты M0–M11, walk-forward сравнение трёх прогнозных стратегий, качество данных и архитектуру SQL-хранилища. Внутри есть фильтры, поиск, сортировка и выгрузки CSV.
 
@@ -20,7 +30,14 @@ Commerce Analytics поставляется отдельным архивом. �
 Проверки конвейера: **<!-- commerce-core-checks -->42<!-- /commerce-core-checks --> проверки**. [Протокол](commerce_platform/results/validation.json) · [Повторный полный прогон: пять CSV побайтно совпали](commerce_platform/results/reexecution_validation.json).
 <!-- commerce-integration:readme:end -->
 
-## Быстрая проверка
+## Другие работы: продажи, CRM и A/B
+
+[Продажи и A/B-анализ](https://manhalrr.github.io/Rafif/analytics.html) · [CRM-кейс](customer_analytics/index.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Архив «Продажи / CRM / A/B»](downloads/Rafif_Analytics_Source.zip)
+
+Продажи и когорты UCI Online Retail, A/B-анализ на синтетических данных и Customer Analytics — RFM-сегментация с проверкой на будущем периоде. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP; статус проверки указан ниже.
+
+## Дополнительная проверка продаж и Excel
+
 
 1. В [дашборде](https://manhalrr.github.io/Rafif/analytics.html) выберите Германию и январь–март 2011: оборот после отмен **£39 590,69**, **82 заказа**.
 2. В [Excel](downloads/Retail_Analytics.xlsx) выберите Германию: за весь период январь–ноябрь — **£199 330,67**, **410 заказов**. Лист «Когорты» содержит формулы и незаполненные будущие окна.
