@@ -7,6 +7,14 @@
     "bytes": 10904,
     "sha256": "9603e9f37800c99f0108b3a8aae3f8007b16cd71c60ace99d98518e07c3f7325"
   },
+  "Customer_Analytics_Source.zip": {
+    "bytes": 31310,
+    "sha256": "4315c4be9b1ad6a98256b2fb898330323a50ff2fea59a2a0c43973e6e413d27b"
+  },
+  "Excel_Openpyxl_validation.json": {
+    "bytes": 650,
+    "sha256": "77eba1009353c63ed13f310f79781d0b32ca7cad01d2e4a47604048817c10038"
+  },
   "measures.dax": {
     "bytes": 2307,
     "sha256": "12c22ac0921c085a2059d2baf3d6abfd919041ec00413f78da8d0294dae508a6"
@@ -28,12 +36,16 @@
     "sha256": "ebc5ffa9b5ddbcd504bcc7815276a3f6e028e59f7b077672bc8909969da4fbeb"
   },
   "Rafif_Analytics_Source.zip": {
-    "bytes": 1602143,
-    "sha256": "ca2eff366bbd41249248fae9aeebff4d21b83755703d92a0d6ef0abcb84c5005"
+    "bytes": 1689100,
+    "sha256": "a586a3ff645d4acf55c96059ba74836d20e6261bd50b8df468e4b14b44a9be95"
   },
   "Retail_Analytics.xlsx": {
     "bytes": 47435,
     "sha256": "981d308c2cc4c6583e3b2edbc1a075991f24efcac78f305dcadfa56efcde8389"
+  },
+  "Retail_Analytics_Openpyxl.xlsx": {
+    "bytes": 49971,
+    "sha256": "622d58640e0305f86aab6acfa346b9e114eb3a408b72e7bba9037391b96f469d"
   },
   "SQL_queries.zip": {
     "bytes": 1980,

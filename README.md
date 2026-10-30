@@ -1,8 +1,8 @@
 # Рафиф Алшауи · Data Analytics
 
-**[Открыть портфолио](https://manhalrr.github.io/Rafif/)** · [Интерактивный анализ](https://manhalrr.github.io/Rafif/analytics.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Полный комплект](downloads/Rafif_Analytics_Source.zip)
+**[Открыть портфолио](https://manhalrr.github.io/Rafif/)** · [Интерактивный анализ](https://manhalrr.github.io/Rafif/analytics.html) · [CRM-кейс](customer_analytics/index.html) · [Excel](downloads/Retail_Analytics.xlsx) · [Полный комплект](downloads/Rafif_Analytics_Source.zip)
 
-Анализ продаж и повторных покупок на UCI Online Retail, плюс A/B-анализ на синтетических данных. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP.
+Три аналитических кейса: продажи и когорты UCI Online Retail, A/B-анализ на синтетических данных и Customer Analytics — RFM-сегментация с проверкой на будущем периоде. SQL и Python выполняют расчёты, Excel позволяет проверить формулы и фильтры. Проект Power BI опубликован в редактируемом формате PBIP.
 
 ## Быстрая проверка
 
@@ -37,7 +37,27 @@ python analyze.py
 
 Конвейер: **XLSX → нормализация → SQLite / SQL → независимая сверка pandas → CSV / JSON → отчётность**.
 
-В полном архиве дополнительно находятся генераторы PDF/HTML, Excel и PBIP, исходники модели и готовые отчёты. Минимальные зависимости там — `requirements-core.txt`; PDF-генерация использует Windows Arial и описана в README. Генератор Excel требует Node.js и `@oai/artifact-tool`; готовая книга открывается без него.
+В полном архиве дополнительно находятся генераторы PDF/HTML, Excel и PBIP, исходники модели, CRM-кейс и готовые отчёты. Минимальные зависимости — `requirements-core.txt`; полный набор — `requirements.txt`. Excel пересобирается общедоступным `openpyxl`: `python build_workbook.py`. Node.js и закрытые пакеты для этого не нужны. Генератор PDF автоматически ищет Arial/DejaVu Sans или принимает `RAFIF_FONT_REGULAR` и `RAFIF_FONT_BOLD`.
+
+[Новая Excel-книга](downloads/Retail_Analytics_Openpyxl.xlsx) собрана через openpyxl, затем пересчитана и проверена в Microsoft Excel: итог £8 587 247,02, 17 582 заказа, Германия £199 330,67 / 410 заказов, M1 19,94%, пустые будущие окна. [Протокол](downloads/Excel_Openpyxl_validation.json). Исходная [опубликованная книга](downloads/Retail_Analytics.xlsx) сохранена отдельно. При локальной пересборке openpyxl записывает формулы, но не вычисляет их: откройте результат в Excel/LibreOffice, пересчитайте и сохраните.
+
+## Customer Analytics / CRM
+
+[Открыть отчёт](customer_analytics/index.html) · [Исходники и агрегаты ZIP](downloads/Customer_Analytics_Source.zip) · [Полная методика](customer_analytics/README.md).
+
+- **3 616 клиентов, 5 сегментов, 40 автоматических проверок.** История до 01.10.2011; holdout — октябрь–ноябрь 2011, 61 день.
+- **47,70%** базы купили в будущем периоде. Ценные регулярные — **13,16% клиентов и 52,98%** будущего оборота базы после отмен.
+- Результаты SQL независимо сверены с pandas. Проверено отсутствие утечки; есть интервалы Wilson, сверка покрытия и чувствительность к дубликатам.
+- Исторические данные одного магазина и сезонный holdout. Причинный эффект CRM, прибыль и ROI не заявляются; индивидуальные клиентские строки не публикуются.
+
+После `python analyze.py`, который загружает UCI, запустите:
+
+```bash
+python -m pip install -r customer_analytics/requirements.txt
+python customer_analytics/run.py
+# Только быстрые граничные тесты, без XLSX:
+python customer_analytics/run.py --tests-only
+```
 
 ## Данные и определения
 
@@ -56,7 +76,8 @@ python analyze.py
 | Артефакт | Что проверено |
 |---|---|
 | Python / SQL | 28 автоматических проверок: исходник, сверка сумм и когорт, цензура окон, участники эксперимента. |
-| Excel | Открыт в Microsoft Excel; формулы, диаграммы, общий итог и фильтр Германии проверены. |
+| Excel | Обе опубликованные версии открыты и проверены в Microsoft Excel. Новая сборка воспроизводится на openpyxl; отдельный протокол доступен в загрузках. |
+| Customer Analytics | 40 проверок SQL/pandas, отсутствие утечки, денежные сверки и граничные случаи. Два SVG-графика из выполненных расчётов. |
 | HTML | Фильтры страны и периода, обработка неверного диапазона, A/B-вкладка. |
 | Power BI PBIP | 44 проверки JSON-схем Microsoft, связей и исходных данных. **Power BI Desktop и выполнение DAX ещё не проверены; PBIX не включён.** [Инструкция](downloads/PowerBI_README.txt) · [протокол](downloads/PowerBI_validation.json). |
 

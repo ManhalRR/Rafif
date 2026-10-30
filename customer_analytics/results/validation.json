@@ -1,0 +1,166 @@
+{
+  "passed": 40,
+  "failed": 0,
+  "checks": [
+    {
+      "check": "Exact documented UCI source SHA-256",
+      "passed": true
+    },
+    {
+      "check": "Source row count",
+      "passed": true
+    },
+    {
+      "check": "Unique customer unit",
+      "passed": true
+    },
+    {
+      "check": "One and only one rule-based segment per customer",
+      "passed": true
+    },
+    {
+      "check": "Recency strictly positive at snapshot",
+      "passed": true
+    },
+    {
+      "check": "SQL/pandas customer universe",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: recency_days",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: frequency",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: monetary_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: future_orders",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: future_gross_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: future_cancel_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: future_net_pence",
+      "passed": true
+    },
+    {
+      "check": "Independent SQL/pandas reconciliation: segment",
+      "passed": true
+    },
+    {
+      "check": "Leakage test: removing all holdout rows leaves features unchanged",
+      "passed": true
+    },
+    {
+      "check": "Existing-customer holdout net reconciles to transactions",
+      "passed": true
+    },
+    {
+      "check": "Holdout gross less cancellations equals net per client",
+      "passed": true
+    },
+    {
+      "check": "History orders each belong to one customer",
+      "passed": true
+    },
+    {
+      "check": "Segment sizes reconcile to customer universe",
+      "passed": true
+    },
+    {
+      "check": "Segment returning clients reconcile",
+      "passed": true
+    },
+    {
+      "check": "Segment future net reconciles",
+      "passed": true
+    },
+    {
+      "check": "Duplicate sensitivity preserves client universe",
+      "passed": true
+    },
+    {
+      "check": "Fixture: SQL/pandas agree on mixed edge cases",
+      "passed": true
+    },
+    {
+      "check": "Fixture: future-only and cancellation-only clients excluded",
+      "passed": true
+    },
+    {
+      "check": "Fixture: R/F use only dates before snapshot",
+      "passed": true
+    },
+    {
+      "check": "Fixture: October 1 included, December 1 excluded",
+      "passed": true
+    },
+    {
+      "check": "Fixture: signed cancellations reduce net without creating a purchase",
+      "passed": true
+    },
+    {
+      "check": "Fixture: no later activity gives zero purchases, not a missing customer",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=30, F=5, M=100000",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=31, F=5, M=100000",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=30, F=5, M=99999",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=90, F=3, M=100000",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=91, F=3, M=100000",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=30, F=1, M=100",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=31, F=1, M=100",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=60, F=2, M=100",
+      "passed": true
+    },
+    {
+      "check": "Fixture: segment boundary R=61, F=2, M=100",
+      "passed": true
+    },
+    {
+      "check": "Fixture: Wilson interval handles 0/10",
+      "passed": true
+    },
+    {
+      "check": "Fixture: Wilson interval handles 10/10",
+      "passed": true
+    },
+    {
+      "check": "Coverage bridge reconciles all holdout net",
+      "passed": true
+    }
+  ]
+}

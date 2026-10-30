@@ -1,0 +1,34 @@
+{
+  "project": "Customer Analytics / CRM segmentation",
+  "source": "UCI Online Retail",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "dates": {
+    "history_start": "2010-12-01",
+    "snapshot": "2011-10-01",
+    "holdout_end": "2011-12-01"
+  },
+  "source_rows": 541909,
+  "accepted_rows": 539392,
+  "excluded_rows": 2517,
+  "exact_duplicate_rows_retained": 5268,
+  "customers": 3616,
+  "returning_customers": 1725,
+  "return_rate": 0.47704646017699115,
+  "history_net_gbp": 5860987.49,
+  "holdout_existing_net_gbp": 1774057.66,
+  "holdout_other_known_net_gbp": 332953.67,
+  "holdout_unknown_net_gbp": 425449.59,
+  "holdout_all_net_gbp": 2532460.92,
+  "holdout_missing_id_positive_sales_share": 0.17389517651546318,
+  "dedup_sensitivity": {
+    "customers_with_changed_segment": 0,
+    "existing_holdout_net_delta_gbp": 3797.24
+  },
+  "checks_passed": 40,
+  "runtime": {
+    "python": "3.12.14",
+    "pandas": "3.0.1",
+    "numpy": "2.3.5",
+    "sqlite": "3.53.1"
+  }
+}

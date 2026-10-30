@@ -1,0 +1,22 @@
+{
+  "checked_at_utc": "2026-10-30T07:57:32.1705337Z",
+  "engine": "Microsoft Excel",
+  "version": "16.0",
+  "net_gbp": 8587247.02,
+  "orders": 17582.0,
+  "weighted_m1": 0.19941728714794432,
+  "germany_net_gbp": 199330.67,
+  "germany_orders": 410.0,
+  "future_m1": "blank",
+  "bahrain_cancellation_only_month": "passed",
+  "sales_charts": 1,
+  "cohort_charts": 1,
+  "temporary_edits_saved": false,
+  "cached_error_scan": "passed via openpyxl after native save",
+  "preview_files": [
+    "sales.pdf",
+    "cohorts.pdf",
+    "source.pdf"
+  ],
+  "output_sha256": "622d58640e0305f86aab6acfa346b9e114eb3a408b72e7bba9037391b96f469d"
+}
